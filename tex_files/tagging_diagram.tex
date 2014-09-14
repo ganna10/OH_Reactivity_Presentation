@@ -1,0 +1,20 @@
+\tikzstyle{int}=[draw=BlueIASS, fill=GreyIASS, minimum size=2em]
+\begin{tikzpicture}[node distance=1.78cm,auto,>=latex',ultra thick]
+    \node [int] (a) [align=center, fill=white]{\textbf{\LARGE{\ce{CH4}}}};
+    
+    \node [int] (b) [below right of = a, align=center]{\textbf{HCHO}};
+    \node [int] (c) [above of = a, align=center] {\textbf{\ce{HO2}}}; 
+    \node [int] (d) [below left of = a, align=center]{\textbf{\ce{CH3O2}}};
+    \node [int] (f) [left of = a, align=center]{\textbf{CO}};
+    \node [int] (g) [right of = a, align=center] {\textbf{\ce{OH}}};
+    
+    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (b);
+    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (c);
+    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (d);
+    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (f);
+    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (g);
+
+    \node [text=BlueIASS] (h) [below = 1mm of d, align=center] {\footnotesize{\textbf{CH3O2\_CH4}}};
+    \node [text=BlueIASS] (i) [below = 1mm of b, align=center] {\footnotesize{\textbf{HCHO\_CH4}}};
+    \node [text=BlueIASS] (j) [above = 0.5mm of f, align=center] {\footnotesize{\textbf{CO\_CH4}}};
+\end{tikzpicture}

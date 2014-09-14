@@ -1,0 +1,66 @@
+\begin{frame}
+    \frametitle{Outline} 
+    \begin{flushleft}
+        \tableofcontents[currentsection]
+    \end{flushleft}
+\end{frame} 
+
+\begin{frame}
+    \frametitle{Boxmodel Set-up}
+
+    \begin{itemize}
+        \item MECCA boxmodel using MCM v3.2 chemistry. \vspace{3mm}
+        \item Seven day run time at equinoctical conditions. \vspace{3mm}
+        \item Idealised NO conditions giving maximum \ce{O3} production. \vspace{3mm}
+        \item Initial VOC mixing ratios held constant until noon of first day.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Emitted VOCs}
+    \vspace{-2mm}
+
+    \begin{itemize}
+        \item Emitted VOCs typical for Los Angeles [Baker et al., AE, 2008].
+    \end{itemize}
+    \vspace{3mm}
+
+    \begin{description}
+        \item[Alkanes] Ethane, propane, butane, 2-methyl propane, pentane, 2-methyl butane, hexane, heptane, octane. 
+        \item[Alkenes] Ethene, propene, butene, 2-methyl propene, isoprene. 
+        \item[Aromatics] Benzene, toluene, m-xylene, o-xylene, p-xylene, ethylbenzene. 
+    \end{description}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tagging the MCM v3.2}
+    \vspace{-5mm}
+
+    \begin{columns}[onlytextwidth]
+        \begin{column}{0.4\textwidth}
+            \begin{flushleft}
+                \input{tex_files/tagging_diagram}
+            \end{flushleft}
+        \end{column}%
+        \begin{column}{0.55\textwidth}
+            \begin{center}
+                \begin{itemize}
+                    \item Every organic degradation product labelled with emitted VOC name.
+                    \item Each VOC has its own set of degradation reactions.
+                    \item Tag used to allocate OH reactivity of degradation products to emitted VOC.
+                \end{itemize}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{OH Reactivity VOC Allocation}
+
+    \begin{itemize}
+        \item Calculate OH reactivity of each degradation product \\ (rate constant $\times$ non-OH reactant concentration). \vspace{2mm}
+        \item Tag indicates VOC source of degradation product. \vspace{2mm}
+        \item Sum all OH reactivities of each emitted VOC and \\ its degradation products. \vspace{2mm}
+        \item Allocated OH reactivities integrated over each day and \\ night period.
+    \end{itemize}
+\end{frame}
