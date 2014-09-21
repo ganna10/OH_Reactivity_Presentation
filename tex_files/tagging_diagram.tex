@@ -2,19 +2,15 @@
 \begin{tikzpicture}[node distance=1.78cm,auto,>=latex',ultra thick]
     \node [int] (a) [align=center, fill=white]{\textbf{\LARGE{\ce{CH4}}}};
     
-    \node [int] (b) [below right of = a, align=center]{\textbf{HCHO}};
-    \node [int] (c) [above of = a, align=center] {\textbf{\ce{HO2}}}; 
-    \node [int] (d) [below left of = a, align=center]{\textbf{\ce{CH3O2}}};
-    \node [int] (f) [left of = a, align=center]{\textbf{CO}};
-    \node [int] (g) [right of = a, align=center] {\textbf{\ce{OH}}};
+    \node [int] (b) [below of = a, align=center]{\textbf{\ce{CH3O2}}};
+    \node [int] (c) [below of = b, align=center]{\textbf{HCHO}};
+    \node [int] (d) [below of = c, align=center]{\textbf{CO}};
     
     \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (b);
-    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (c);
-    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (d);
-    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (f);
-    \path [->, draw=BlueIASS, fill=BlueIASS] (a) edge node {} (g);
-
-    \node [text=BlueIASS] (h) [below = 1mm of d, align=center] {\footnotesize{\textbf{CH3O2\_CH4}}};
-    \node [text=BlueIASS] (i) [below = 1mm of b, align=center] {\footnotesize{\textbf{HCHO\_CH4}}};
-    \node [text=BlueIASS] (j) [above = 0.5mm of f, align=center] {\footnotesize{\textbf{CO\_CH4}}};
+    \path [->, draw=BlueIASS, fill=BlueIASS] (b) edge node {} (c);
+    \path [->, draw=BlueIASS, fill=BlueIASS] (c) edge node {} (d);
+    
+    \node [text=BlueIASS] (e) [right = 3mm of b, align=center] {\footnotesize{\textbf{CH3O2\_CH4}}};
+    \node [text=BlueIASS] (f) [right = 3mm of c, align=center] {\footnotesize{\textbf{HCHO\_CH4}}};
+    \node [text=BlueIASS] (g) [right = 6.4mm of d, align=center] {\footnotesize{\textbf{CO\_CH4}}};
 \end{tikzpicture}
